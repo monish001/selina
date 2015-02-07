@@ -16,7 +16,7 @@ namespace SelinaTestRunner
         public ClientManager() {
             clientList = new Dictionary<string, Client>();
             grandHubClients = new List<Client>();
-            for (int index = 0; index < 20; index++)
+            for (int index = 0; index < 1; index++)
             {
                 grandHubClients.Add(new Client("http://134.170.220.187:84/"));
             }

@@ -106,11 +106,41 @@ namespace SelinaTestRunner
         }
 
         public static string GetTestAssemblyPath()
-        {            
+        {
             string testAssemblyPath = "";
             try
             {
                 testAssemblyPath = ConfigurationManager.AppSettings["testAssemblyPath"];
+                //testAssemblyPath = @"D:\Projects\Selina\RunTests\TestAssembly";
+            }
+            catch (Exception ex)
+            {
+                Log(ex);
+            }
+            return testAssemblyPath;
+        }
+
+        public static string GetTestProjectDll()
+        {
+            string testAssemblyPath = "";
+            try
+            {
+                testAssemblyPath = ConfigurationManager.AppSettings["testProjectDll"];
+                //testAssemblyPath = @"D:\Projects\Selina\RunTests\TestAssembly";
+            }
+            catch (Exception ex)
+            {
+                Log(ex);
+            }
+            return testAssemblyPath;
+        }
+
+        public static string GetTestsNamespace()
+        {
+            string testAssemblyPath = "";
+            try
+            {
+                testAssemblyPath = ConfigurationManager.AppSettings["testsNamespace"];
                 //testAssemblyPath = @"D:\Projects\Selina\RunTests\TestAssembly";
             }
             catch (Exception ex)

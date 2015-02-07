@@ -27,7 +27,7 @@ namespace SelinaTestRunner
         private List<string> GetListOfTests() {
             var testQuery = new TestQuery();
             var workingDirectory = StaticUtilities.GetWorkingDirectoryPath();
-            var testList = testQuery.GetTestNames(workingDirectory + @"\TestAssembly\CampaignUI.dll", "CampaignUI.CampaignFeatures");
+            var testList = testQuery.GetTestNames(workingDirectory + @"\TestAssembly\" + StaticUtilities.GetTestProjectDll(), StaticUtilities.GetTestsNamespace());
             return testList;
         }
     }
