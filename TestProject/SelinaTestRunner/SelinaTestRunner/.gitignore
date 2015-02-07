@@ -43,6 +43,5 @@ Temporary Items
 .apdisk
 *.suo
 *.suo
-*.suo
-*.suo
-*.suo
+bin
+Debug
